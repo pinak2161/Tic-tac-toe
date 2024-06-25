@@ -91,3 +91,19 @@ body {
     border-radius: 1rem;
     border: none;
   }
+
+#msg {
+  color: #fff;
+  font-size: 8vmin;
+  font-weight: 600;
+}
+.msg-container {
+    height: 30vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.hide{
+    display: none;
+}
