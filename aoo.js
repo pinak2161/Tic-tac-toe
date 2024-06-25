@@ -22,6 +22,22 @@ boxes.forEach((box)=>{
             box.innerHTML="X";
             turnO=true;
         }
+        box.disabled = true;
+        checkWinner();
+   
     })
 });
 
+const checkWinner = () => {
+    for (let pattern of winPatterns) {
+      let pos1Val = boxes [pattern [0]].innerText;
+      let pos2Val = boxes [pattern [1]].innerText;
+      let pos3val = boxes [pattern [2]].innerText;
+
+      if (pos1Val != "" && pos2Val != "" && pos3val != "") {
+        if (pos1Val === pos2Val && pos2Val === pos3val) {
+          console.log(`Winner is ${pos1Val}`);
+        }
+      }
+    }
+  };
